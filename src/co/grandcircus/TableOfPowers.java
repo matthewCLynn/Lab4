@@ -12,7 +12,7 @@ public class TableOfPowers {
 	{
 		
 		String input = "y";
-		int num, square, cube;
+		int num;
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Learn your squares and cubes!");
@@ -21,14 +21,10 @@ public class TableOfPowers {
 					 
 		System.out.println("Please, enter an integer: ");
 		num = scan.nextInt();
-		square = squareNum(num);
-		cube = cubeNum(num);
-		//String Sean = "";
-		System.out.println(num + " " + square + " " + cube);
-		System.out.println("\nNumber      Squared     Cubed");
+		System.out.println("\nNumber          Squared         Cubed");
 		//Sean = "\nNumber" + String.format("%12d", "Squared") + String.format("%12d", "Cubed");
 		
-		System.out.println("=======     =======     ======");
+		System.out.println("======          =======         ======");
 		
 
 		
@@ -46,12 +42,12 @@ public class TableOfPowers {
 		scan.close();
 	}
 	
-	public static int squareNum(int num)
+	public static long squareNum(int num)
 	{
 		return num*num;
 	}
 	
-	public static int cubeNum(int nom)
+	public static long cubeNum(int nom)
 	{
 		return nom * nom * nom;
 	}
@@ -60,11 +56,12 @@ public class TableOfPowers {
 	{
 		for(int i = 1; i <= num; i++)
 		{
-			System.out.print(i);
-			System.out.printf("%12d", squareNum(i));
-			System.out.printf("%12d", cubeNum(i));
+			System.out.printf("%-16d", i);
+			System.out.printf("%-16d", squareNum(i));
+			System.out.printf("%-16d", cubeNum(i));
 			System.out.println();
 		}
+		System.out.println();
 			
 	}
 	
