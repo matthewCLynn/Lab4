@@ -21,11 +21,15 @@ public class TableOfPowers {
 					 
 		System.out.println("Please, enter an integer: ");
 		num = scan.nextInt();
-		System.out.println("\nNumber          Squared         Cubed");
-		//Sean = "\nNumber" + String.format("%12d", "Squared") + String.format("%12d", "Cubed");
-		
-		System.out.println("======          =======         ======");
-		
+		System.out.println();
+		System.out.printf("%-16s", "Number");
+		System.out.printf("%-16s","Squared");
+		System.out.printf("%-16s","Cubed");
+		System.out.println();
+		System.out.printf("%-16s","======");
+		System.out.printf("%-16s","=======");
+		System.out.printf("%-16s","======");
+		System.out.println();
 
 		
 //		System.out.print(num);
